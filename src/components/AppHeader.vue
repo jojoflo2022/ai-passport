@@ -25,7 +25,7 @@
 import { ref, onMounted } from "vue";
 import Typed from "typed.js"; // タイピングエフェクト用のライブラリ
 export default {
-  name: "Header",
+  name: "AppHeader",
   setup() {
     const typedTitle = ref("");
     onMounted(() => {

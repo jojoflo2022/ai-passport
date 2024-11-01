@@ -7,7 +7,7 @@
         生成AIの知識を楽しく学び、スキルアップに役立つクイズアプリです！
       </p>
       <img
-        src="/path/to/ai-illustration.gif"
+        src="src\components\IntroSection.vue"
         alt="生成AIのイメージ"
         class="intro-image"
       />
@@ -60,7 +60,7 @@
 
 <script>
 export default {
-  name: "Introduction",
+  name: "IntroSection",
 };
 </script>
 
