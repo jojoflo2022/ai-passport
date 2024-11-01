@@ -5,7 +5,7 @@
       v-if="!showQuiz && !showResult"
       @start-quiz="startQuiz"
     />
-    <QuizComponent
+    <AppQuizComponent
       v-if="showQuiz"
       :question="currentQuestion.question"
       :options="shuffledOptions"
@@ -14,7 +14,7 @@
       :is-correct="isCorrect"
       @submit-answer="submitAnswer"
     />
-    <ResultComponent
+    <AppResultComponent
       v-if="showResult"
       :score="score"
       :totalQuestions="quizData.length"
@@ -27,15 +27,15 @@
 <script>
 import AppHeaderComponent from "./components/AppHeader.vue";
 import IntroSectionComponent from "./components/IntroSection.vue";
-import QuizComponent from "./components/Quiz.vue";
-import ResultComponent from "./components/Result.vue";
+import AppQuizComponent from "./components/AppQuiz.vue";
+import AppResultComponent from "./components/AppResult.vue";
 
 export default {
   components: {
     AppHeaderComponent,
     IntroSectionComponent,
-    QuizComponent,
-    ResultComponent,
+    AppQuizComponent,
+    AppResultComponent,
   },
   data() {
     return {
