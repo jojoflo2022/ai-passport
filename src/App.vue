@@ -1,8 +1,11 @@
 <template>
   <div id="app">
-    <AppHeader />
-    <IntroSection v-if="!showQuiz && !showResult" @start-quiz="startQuiz" />
-    <Quiz
+    <AppHeaderComponent />
+    <IntroSectionComponent
+      v-if="!showQuiz && !showResult"
+      @start-quiz="startQuiz"
+    />
+    <QuizComponent
       v-if="showQuiz"
       :question="currentQuestion.question"
       :options="shuffledOptions"
@@ -11,7 +14,7 @@
       :is-correct="isCorrect"
       @submit-answer="submitAnswer"
     />
-    <Result
+    <ResultComponent
       v-if="showResult"
       :score="score"
       :totalQuestions="quizData.length"
@@ -22,17 +25,17 @@
 </template>
 
 <script>
-import AppHeader from "./components/AppHeader.vue";
-import IntroSection from "./components/IntroSection.vue";
-import Quiz from "./components/Quiz.vue";
-import Result from "./components/Result.vue";
+import AppHeaderComponent from "./components/AppHeader.vue";
+import IntroSectionComponent from "./components/IntroSection.vue";
+import QuizComponent from "./components/Quiz.vue";
+import ResultComponent from "./components/Result.vue";
 
 export default {
   components: {
-    AppHeader,
-    IntroSection,
-    Quiz,
-    Result,
+    AppHeaderComponent,
+    IntroSectionComponent,
+    QuizComponent,
+    ResultComponent,
   },
   data() {
     return {
