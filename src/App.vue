@@ -25,8 +25,8 @@
 </template>
 
 <script>
-import HeaderComponent from "./components/Header.vue";
-import IntroductionComponent from "./components/Introduction.vue";
+import AppHeaderComponent from "./components/AppHeader.vue";
+import IntroSectionComponent from "./components/IntroSection.vue";
 import QuizComponent from "./components/Quiz.vue";
 import ResultComponent from "./components/Result.vue";
 
