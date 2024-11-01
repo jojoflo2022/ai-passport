@@ -1,131 +1,128 @@
 <template>
   <header class="app-header">
-    <!-- タイトルエフェクト -->
-    <h1 class="title"><span v-html="typedTitle"></span></h1>
-
-    <!-- サブヘッダーのアイコン付きリスト -->
-    <div class="sub-headers">
-      <p><i class="fas fa-robot"></i> AIについて学べる</p>
-      <p><i class="fas fa-brain"></i> 知識を試そう</p>
-      <p><i class="fas fa-lightbulb"></i> スキルを高める</p>
+    <div class="header-content">
+      <h1 class="app-title">生成AIパスポート試験対策アプリ</h1>
+      <p class="app-subtitle">
+        生成AIの知識を楽しく学び、試験を通してスキルを向上させましょう！
+      </p>
     </div>
-
-    <!-- ボタン -->
-    <div class="buttons">
-      <button class="start-button">スタート</button>
-      <button class="guide-button">学習ガイド</button>
-    </div>
-
-    <!-- パーティクルエフェクト -->
-    <div id="particles-js"></div>
   </header>
 </template>
 
-<script>
-import { ref, onMounted } from "vue";
-import Typed from "typed.js"; // タイピングエフェクト用のライブラリ
-export default {
-  name: "AppHeader",
-  setup() {
-    const typedTitle = ref("");
-    onMounted(() => {
-      new Typed(".title span", {
-        strings: ["生成AIパスポート試験対策アプリ"],
-        typeSpeed: 60,
-        loop: true,
-        backDelay: 2000,
-        backSpeed: 30,
-      });
-    });
-    return { typedTitle };
-  },
-};
-</script>
-
 <style scoped>
-/* 背景グラデーションと全体設定 */
+/* ヘッダーの全体レイアウト */
 .app-header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 250px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #1e3c72);
-  color: #fff;
-  overflow: hidden;
-  padding: 20px;
+  background: linear-gradient(135deg, #4a90e2, #145da0);
+  padding: 40px 20px;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeInDown 1.2s ease;
 }
 
-/* タイトルエフェクト */
-.title {
-  font-size: 2.5em;
-  font-weight: bold;
+/* コンテンツの内側デザイン */
+.header-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* メインタイトル */
+.app-title {
+  font-size: 3em;
+  font-weight: 700;
   margin: 0;
-  color: #ffeb3b;
-}
-
-/* サブヘッダーアイコン付きリスト */
-.sub-headers {
-  display: flex;
-  gap: 20px;
-  font-size: 1.2em;
-  margin: 20px 0;
-}
-
-.sub-headers p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.sub-headers i {
-  color: #ffc107;
-}
-
-/* 3Dボタンのスタイル */
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-.start-button,
-.guide-button {
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 1em;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.start-button {
-  background-color: #4caf50;
   color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  animation: expandText 1.2s ease;
+  position: relative;
+  display: inline-block;
 }
 
-.guide-button {
-  background-color: #f44336;
-  color: #fff;
-}
-
-.start-button:hover,
-.guide-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* パーティクルエフェクト */
-#particles-js {
+.app-title:after {
+  content: "";
   position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 0;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+  animation: expandLine 0.6s ease;
+}
+
+/* サブタイトル */
+.app-subtitle {
+  font-size: 1.5em;
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #f0f4f8;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  animation: fadeInText 1.5s ease;
+}
+
+/* アニメーション */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandText {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes expandLine {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* レスポンシブ設定 */
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 2.5em;
+  }
+
+  .app-subtitle {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 2em;
+  }
+
+  .app-subtitle {
+    font-size: 1.1em;
+  }
 }
 </style>
