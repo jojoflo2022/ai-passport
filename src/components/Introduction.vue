@@ -1,68 +1,215 @@
 <template>
-  <div class="introduction">
-    <h2>
-      <ruby>目的<rt>もくてき</rt></ruby>
-    </h2>
-    <p>
-      このクイズは、SDGsの17の<ruby>目標<rt>もくひょう</rt></ruby
-      >について <ruby>楽<rt>たの</rt></ruby
-      >しみながら<ruby>学<rt>まな</rt></ruby
-      >べるように <ruby>作成<rt>さくせい</rt></ruby
-      >されました。 <ruby>社会課題<rt>しゃかいかだい</rt></ruby
-      >への<ruby>関心<rt>かんしん</rt></ruby> を<ruby>高<rt>たか</rt></ruby
-      >め、<ruby>自<rt>みずから</rt></ruby
-      >ら <ruby>行動<rt>こうどう</rt></ruby
-      >を<ruby>起<rt>お</rt></ruby
-      >こすきっかけを <ruby>提供<rt>ていきょう</rt></ruby
-      >することを<ruby>目的<rt>もくてき</rt></ruby>
-      としています。
-    </p>
-    <h2>SDGsとは</h2>
-    <img
-      src="https://www.town.minamifurano.hokkaido.jp/wp-content/uploads/2024/04/sdgs_01.png"
-      alt="SDGs Icons"
-      class="sdgs-icons"
-    />
-    <p>
-      SDGs（<ruby>持続可能<rt>じぞくかのう</rt></ruby
-      >な <ruby>開発目標<rt>かいはつもくひょう</rt></ruby
-      >）とは、 2015年9月の <ruby>国連<rt>こくれん</rt></ruby
-      >サミットで<ruby>採択<rt>さいたく</rt></ruby> された「<ruby
-        >持続可能<rt>じぞくかのう</rt></ruby
-      >な <ruby>開発<rt>かいはつ</rt></ruby
-      >のための2030アジェンダ」 にて <ruby>記載<rt>きさい</rt></ruby
-      >された2016年から2030年までの <ruby>国際<rt>こくさい</rt></ruby
-      >目標です。 <ruby>持続可能<rt>じぞくかのう</rt></ruby
-      >な<ruby>世界<rt>せかい</rt></ruby> を<ruby>実現<rt>じつげん</rt></ruby
-      >するための17のゴール・169のターゲットから
-      <ruby>構成<rt>こうせい</rt></ruby
-      >され、 <ruby>地球上<rt>ちきゅうじょう</rt></ruby
-      >の<ruby>誰一人<rt>だれひとり</rt></ruby> として<ruby>取<rt>と</rt></ruby
-      >り<ruby>残<rt>のこ</rt></ruby
-      >さない （leave no one behind）ことを<ruby>誓<rt>ちか</rt></ruby
-      >っています。 SDGsは<ruby>発展途上国<rt>はってんとじょうこく</rt></ruby
-      >のみならず、 <ruby>先進国<rt>せんしんこく</rt></ruby
-      >自らが<ruby>取<rt>と</rt></ruby
-      >り <ruby>組<rt>く</rt></ruby
-      >むユニバーサル（<ruby>普遍的<rt>ふへんてき</rt></ruby
-      >） なものであり、<ruby>日本<rt>にほん</rt></ruby
-      >としても <ruby>積極的<rt>せっきょくてき</rt></ruby
-      >に<ruby>取<rt>と</rt></ruby
-      >り <ruby>組<rt>く</rt></ruby
-      >んでいます。
-    </p>
-    <button @click="$emit('start-quiz')" id="start-quiz" class="btn">
-      クイズに進む
-    </button>
-  </div>
+  <section class="introduction">
+    <!-- タイトルセクション -->
+    <div class="intro-header">
+      <h2 class="fade-in">生成AIパスポート試験対策アプリとは？</h2>
+      <p class="fade-in delay">
+        生成AIの知識を楽しく学び、スキルアップに役立つクイズアプリです！
+      </p>
+      <img
+        src="/path/to/ai-illustration.gif"
+        alt="生成AIのイメージ"
+        class="intro-image"
+      />
+    </div>
+
+    <!-- 特徴セクション -->
+    <div class="features">
+      <h3><i class="fas fa-star"></i> 特徴・機能</h3>
+      <ul class="feature-list">
+        <li class="fade-in">
+          <i class="fas fa-clipboard-check"></i> <strong>実践的な問題</strong> -
+          試験範囲を網羅した内容。
+        </li>
+        <li class="fade-in delay">
+          <i class="fas fa-sync-alt"></i> <strong>即時フィードバック</strong> -
+          効果的な学習体験を提供。
+        </li>
+        <li class="fade-in delay-2">
+          <i class="fas fa-chart-line"></i> <strong>スコア機能</strong> -
+          進捗を見える化し、成長を実感。
+        </li>
+      </ul>
+    </div>
+
+    <!-- 使い方ガイド -->
+    <div class="usage-guide">
+      <h3><i class="fas fa-lightbulb"></i> 使い方ガイド</h3>
+      <ol class="guide-steps">
+        <li class="slide-up">
+          「スタート」ボタンを押して、クイズを始めましょう。
+        </li>
+        <li class="slide-up delay">
+          問題ごとに4つの選択肢から答えを選んでください。
+        </li>
+        <li class="slide-up delay-2">
+          すべての問題を解き終わると結果が表示されます！
+        </li>
+      </ol>
+    </div>
+
+    <!-- モチベーションメッセージ -->
+    <div class="motivation">
+      <p class="pulse">
+        生成AIパスポートは、キャリアに新たな道を開くパスポート！一緒に学んでスキルを向上させましょう。
+      </p>
+      <button class="goal-button">目標を設定する</button>
+    </div>
+  </section>
 </template>
 
 <script>
 export default {
-  name: "IntroductionComponent",
+  name: "Introduction",
 };
 </script>
 
 <style scoped>
-/* 必要に応じてスタイルを追加 */
+/* セクション全体の背景とレイアウト */
+.introduction {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease;
+}
+
+/* タイトルセクション */
+.intro-header h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.intro-header p {
+  font-size: 1.2em;
+  color: #d0e4ff;
+  margin-bottom: 20px;
+}
+
+.intro-image {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* 特徴セクション */
+.features h3,
+.usage-guide h3 {
+  font-size: 1.8em;
+  color: #ffeb3b;
+  margin-top: 30px;
+}
+
+.feature-list {
+  text-align: left;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* 使い方ガイド */
+.guide-steps {
+  list-style-type: decimal;
+  margin: 0 auto;
+  padding-left: 1em;
+  font-size: 1.1em;
+}
+
+.guide-steps li {
+  margin-bottom: 8px;
+}
+
+/* モチベーションメッセージ */
+.motivation {
+  margin-top: 30px;
+  font-size: 1.3em;
+  color: #f44336;
+  font-weight: bold;
+}
+
+.goal-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 1.1em;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.goal-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease;
+}
+
+.fade-in.delay {
+  animation-delay: 0.5s;
+}
+
+.fade-in.delay-2 {
+  animation-delay: 1s;
+}
+
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideUp 0.7s ease forwards;
+}
+
+.slide-up.delay {
+  animation-delay: 0.3s;
+}
+
+.slide-up.delay-2 {
+  animation-delay: 0.6s;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
 </style>
