@@ -116,7 +116,7 @@ export default {
 .feature-list li {
   margin-bottom: 10px;
   display: flex;
-  text-align: center;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   color: #fff;
