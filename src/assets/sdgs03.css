@@ -1,0 +1,177 @@
+body {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Meiryo,
+    sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 15px;
+}
+
+ruby {
+  ruby-position: over; /* ふりがなを上に表示する */
+}
+
+rt {
+  font-size: 0.8em; /* ふりがなのフォントサイズを調整 */
+  color: #555; /* ふりがなの色を調整 */
+}
+
+.header-ruby rt {
+  color: #fff; /* ヘッダー内のふりがなの色を白に変更 */
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 5px;
+}
+
+.sdgs-icons {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+#quiz {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#question {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#options {
+  list-style-type: none;
+  padding: 0;
+}
+
+#options li {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#options li:hover {
+  background-color: #e0e0e0;
+}
+
+#start-quiz,
+#submit-btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #007bff;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 18px;
+  text-align: center;
+}
+
+#options li.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.correct {
+  background-color: #a8f0c6;
+  transition: background-color 0.5s;
+}
+
+.incorrect {
+  background-color: #f7a7a3;
+  transition: background-color 0.5s;
+}
+
+#play-again-btn {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  background-color: #28a745;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#play-again-btn:hover {
+  background-color: #218838;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  #question {
+    font-size: 20px;
+  }
+
+  .sdgs-icons {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  #question {
+    font-size: 18px;
+  }
+
+  .sdgs-icons {
+    max-width: 100%;
+  }
+}
