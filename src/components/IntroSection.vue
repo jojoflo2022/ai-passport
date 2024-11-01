@@ -7,7 +7,7 @@
         生成AIの知識を楽しく学び、スキルアップに役立つクイズアプリです！
       </p>
       <img
-        src="src\components\IntroSection.vue"
+        src="../../public/ai-pass.jpg"
         alt="生成AIのイメージ"
         class="intro-image"
       />
@@ -107,9 +107,10 @@ export default {
 }
 
 .feature-list {
-  text-align: left;
+  text-align: center;
   margin: 0 auto;
-  font-size: 1.1em;
+  font-size: 1.25em;
+  color: #fff;
 }
 
 .feature-list li {
@@ -117,6 +118,7 @@ export default {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: #fff;
 }
 
 /* 使い方ガイド */
