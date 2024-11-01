@@ -32,8 +32,8 @@ import ResultComponent from "./components/Result.vue";
 
 export default {
   components: {
-    HeaderComponent,
-    IntroductionComponent,
+    AppHeaderComponent,
+    IntroSectionComponent,
     QuizComponent,
     ResultComponent,
   },
