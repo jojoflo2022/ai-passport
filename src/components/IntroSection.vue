@@ -116,6 +116,7 @@ export default {
 .feature-list li {
   margin-bottom: 10px;
   display: flex;
+  text-align: center;
   align-items: center;
   gap: 10px;
   color: #fff;
@@ -126,7 +127,8 @@ export default {
   list-style-type: decimal;
   margin: 0 auto;
   padding-left: 1em;
-  font-size: 1.1em;
+  font-size: 1.25em;
+  color: #fff;
 }
 
 .guide-steps li {
